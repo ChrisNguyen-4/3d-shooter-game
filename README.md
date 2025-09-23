@@ -1,7 +1,7 @@
 # 3d-shooter-game
 A 3D shooter game made with Godot 4.4.1
 
-# Learning Resources
+# Learning Resources and Licenses
 Create Main Menu - https://youtu.be/zHYkcJyE52g?si=TXgk1HYXNu5gEw-o
 Image for the background for the main menu - https://htmlcolorcodes.com/assets/images/colors/turquoise-color-solid-background-1920x1080.png
 3D Game Tutorial - https://youtu.be/NJJNWGD25rg?si=6rQcn0gIzrJZ22a6
