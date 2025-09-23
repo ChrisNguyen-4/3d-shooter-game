@@ -11,7 +11,7 @@ toy gun - https://www.gdquest.com/library/first_3d_game_godot4_arena_fps/#downlo
 
 # Rules for the game
 
-To run the game on Windows, you must press windows_debug_x86_64
+To run the game you must click on 3D Shooter Game.zip and download it. From there, you must then click on 3D Shooter Game.
 
 There is a main menu screen where the player can choose normal, master and exit. Master mode is harder than normal. The player is able to move the mouse left and right and up and down. The intention is to move the mouse and shoot the gun at the mobs. But I unfortunately didn't get that to work. If the player want to see the mouse cursor, the player can
 press espace can use the cursor to exit the game.
