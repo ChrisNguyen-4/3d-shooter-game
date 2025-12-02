@@ -15,3 +15,6 @@ To run the game you must click on 3D Shooter Game.zip and download it. From ther
 
 There is a main menu screen where the player can choose normal, master and exit. Master mode is harder than normal. The player is able to move the mouse left and right and up and down. The intention is to move the mouse and shoot the gun at the mobs. But I unfortunately didn't get that to work. If the player want to see the mouse cursor, the player can
 press espace can use the cursor to exit the game.
+
+# Constraints
+This only runs on Windows and also if you already instead .NET to run C#.
