@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://myyqrr7js0wx"]
+
+[ext_resource type="Script" uid="uid://0nedfh2vptb0" path="res://Bullet3d.cs" id="1_1ljip"]
+[ext_resource type="PackedScene" uid="uid://7ga80y75ayns" path="res://art/projectile/projectile_model.glb" id="1_y2jmw"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_5cyxl"]
+radius = 0.397061
+
+[node name="Bullet3D" type="Area3D"]
+script = ExtResource("1_1ljip")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_5cyxl")
+
+[node name="projectile_model" parent="." instance=ExtResource("1_y2jmw")]
+transform = Transform3D(0.586949, 0, 0, 0, 0.779938, 0, 0, 0, 0.714741, 0.00726274, -0.00432372, -0.00617093)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

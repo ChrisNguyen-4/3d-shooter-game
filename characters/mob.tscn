@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5o6u5dbtvxis"]
+
+[ext_resource type="Script" uid="uid://b332j5c062fbm" path="res://Mob.cs" id="1_xtcgg"]
+[ext_resource type="PackedScene" uid="uid://ca08ae44sfvay" path="res://art/uav_gerbera_low-poly.glb" id="2_5hqrb"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dy6sc"]
+size = Vector3(4.5, 0.65, 3)
+
+[node name="Mob" type="CharacterBody3D"]
+script = ExtResource("1_xtcgg")
+
+[node name="Pivot" type="Node3D" parent="."]
+
+[node name="Character" parent="Pivot" instance=ExtResource("2_5hqrb")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, 1, -0.75)
+shape = SubResource("BoxShape3D_dy6sc")
+
+[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="."]
+aabb = AABB(-2.25, 0.65, -2.25, 4.5, 0.65, 3)
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier3D" to="." method="OnVisibilityNotifierScreenExited"]

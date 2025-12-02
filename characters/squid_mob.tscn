@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2vp0k4md5seg"]
+
+[ext_resource type="Script" uid="uid://c14yeyiuy3yr5" path="res://SquidMob.cs" id="1_v4fdw"]
+[ext_resource type="PackedScene" uid="uid://cemi1633sfbff" path="res://art/squid_mob.glb" id="2_pxyr7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q2dcw"]
+size = Vector3(1.65234, 1, 1.73096)
+
+[node name="Squid_Mob" type="CharacterBody3D"]
+script = ExtResource("1_v4fdw")
+
+[node name="Pivot" type="Node3D" parent="."]
+
+[node name="Character" parent="Pivot" instance=ExtResource("2_pxyr7")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000976563, 0, -0.029541)
+shape = SubResource("BoxShape3D_q2dcw")
+
+[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="."]
+aabb = AABB(-1, -0.75337, -2.03643, 2, 1.50674, 4.07287)
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier3D" to="." method="OnVisibilityNotifierScreenExited"]
