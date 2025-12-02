@@ -1,5 +1,5 @@
 # 3d-shooter-game
-A 3D shooter game made with Godot 4.4.1
+A 3D shooter game made with Godot 4.5.1
 
 # Learning Resources and Licenses
 Create Main Menu - https://youtu.be/zHYkcJyE52g?si=TXgk1HYXNu5gEw-o
